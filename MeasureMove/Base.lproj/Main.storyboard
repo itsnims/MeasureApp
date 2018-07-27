@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="MeasureMove" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4MC-zY-23D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rci-Se-E3z">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </arscnView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="targetWhite" translatesAutoresizingMaskIntoConstraints="NO" id="vaX-kT-abI" userLabel="Target Image View">
+                                <rect key="frame" x="175" y="393.66666666666669" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Z98-6B-vxk"/>
+                                    <constraint firstAttribute="width" constant="25" id="ryY-K4-hDa"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="FGM-Yz-Zto">
+                                <rect key="frame" x="16" y="704" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9N-qO-ZTe">
+                                <rect key="frame" x="41" y="58" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonTappedWithButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="c57-qS-U7q"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJm-D1-Spp" userLabel="Message Label">
+                                <rect key="frame" x="41" y="706" width="161" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lne-Ou-MGD">
+                                <rect key="frame" x="0.0" y="734" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Show" id="YS3-RN-OgU">
+                                        <connections>
+                                            <action selector="showPlanes:" destination="BV1-FR-VrT" id="wqo-r7-OzS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Hide" id="62f-hM-LaO">
+                                        <connections>
+                                            <action selector="hidePlanes:" destination="BV1-FR-VrT" id="OUn-Rv-Vhg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FGM-Yz-Zto" firstAttribute="top" secondItem="y1S-rx-tCE" secondAttribute="top" constant="660" id="66p-Qb-AJw"/>
+                            <constraint firstItem="rci-Se-E3z" firstAttribute="top" secondItem="4MC-zY-23D" secondAttribute="top" id="7ku-1d-hbB"/>
+                            <constraint firstAttribute="trailing" secondItem="rci-Se-E3z" secondAttribute="trailing" id="8s9-sB-vvr"/>
+                            <constraint firstItem="HJm-D1-Spp" firstAttribute="centerY" secondItem="FGM-Yz-Zto" secondAttribute="centerY" id="BXn-I8-1z1"/>
+                            <constraint firstItem="y1S-rx-tCE" firstAttribute="trailing" secondItem="HJm-D1-Spp" secondAttribute="trailing" constant="173" id="Kr7-D9-e7r"/>
+                            <constraint firstItem="FGM-Yz-Zto" firstAttribute="leading" secondItem="y1S-rx-tCE" secondAttribute="leading" constant="16" id="Kzf-kw-SFs"/>
+                            <constraint firstItem="HJm-D1-Spp" firstAttribute="leading" secondItem="FGM-Yz-Zto" secondAttribute="trailing" constant="5" id="LvM-G8-Yk2"/>
+                            <constraint firstAttribute="bottom" secondItem="rci-Se-E3z" secondAttribute="bottom" id="VAL-8k-U5C"/>
+                            <constraint firstItem="rci-Se-E3z" firstAttribute="leading" secondItem="4MC-zY-23D" secondAttribute="leading" id="bD4-OG-Dkg"/>
+                            <constraint firstItem="vaX-kT-abI" firstAttribute="centerX" secondItem="rci-Se-E3z" secondAttribute="centerX" id="iRC-8M-ZdC"/>
+                            <constraint firstItem="vaX-kT-abI" firstAttribute="centerY" secondItem="rci-Se-E3z" secondAttribute="centerY" id="kUv-px-2Xp"/>
+                            <constraint firstItem="HJm-D1-Spp" firstAttribute="top" secondItem="y1S-rx-tCE" secondAttribute="top" constant="662" id="wKp-8r-ykj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y1S-rx-tCE"/>
+                    </view>
+                    <connections>
+                        <outlet property="loadingView" destination="FGM-Yz-Zto" id="DL5-k8-Sax"/>
+                        <outlet property="messageLabel" destination="HJm-D1-Spp" id="hai-Hd-YLR"/>
+                        <outlet property="resetButton" destination="o9N-qO-ZTe" id="nyD-ei-caE"/>
+                        <outlet property="sceneView" destination="rci-Se-E3z" id="ISV-7A-ac7"/>
+                        <outlet property="targetImageView" destination="vaX-kT-abI" id="cNC-Y0-kdU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165.59999999999999" y="56.221889055472268"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="targetWhite" width="400" height="400"/>
+    </resources>
+</document>
